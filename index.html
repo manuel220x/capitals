@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mexicanismos - Aprende Estados y Capitales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="screen">
+        <div class="welcome-container">
+            <h1>¡Mexicanismos!</h1>
+            <h2>Aprende Estados, Capitales y Gentilicios</h2>
+            <p>¡Hola! Vamos a aprender sobre los estados de México de manera divertida.</p>
+            <div class="input-container">
+                <label for="player-name">Escribe tu nombre:</label>
+                <input type="text" id="player-name" placeholder="Tu nombre aquí..." maxlength="20">
+                <button id="start-game" onclick="startGame()">¡Empezar Juego!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen hidden">
+        <div class="game-header">
+            <div class="player-info">
+                <span id="player-display"></span>
+            </div>
+            <div class="score-info">
+                <span>Puntos: <span id="current-score">0</span></span>
+                <span>Estados: <span id="completed-states">0</span>/32</span>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <div class="map-section">
+                <svg id="mexico-map" viewBox="0 0 1000 630" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Mexico map will be populated by JavaScript -->
+                </svg>
+            </div>
+            
+            <div class="progress-section">
+                <h3>Progreso por Estado</h3>
+                <table class="progress-table">
+                    <thead>
+                        <tr>
+                            <th>Estado</th>
+                            <th>Capital</th>
+                            <th>Gentilicio</th>
+                            <th>Puntos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="progress-table-body">
+                        <!-- Progress rows will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Modal -->
+    <div id="quiz-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="state-name"></h2>
+            <form id="quiz-form" autocomplete="off">
+                <div class="question-group">
+                    <label for="capital-input">Capital:</label>
+                    <input type="text" 
+                           id="capital-input" 
+                           name="capital" 
+                           placeholder="Escribe la capital..." 
+                           autocomplete="off" 
+                           autocorrect="off" 
+                           autocapitalize="off" 
+                           spellcheck="false"
+                           required>
+                </div>
+                <div class="question-group">
+                    <label for="demonym-input">Gentilicio:</label>
+                    <input type="text" 
+                           id="demonym-input" 
+                           name="demonym" 
+                           placeholder="¿Cómo se llaman sus habitantes?" 
+                           autocomplete="off" 
+                           autocorrect="off" 
+                           autocapitalize="off" 
+                           spellcheck="false"
+                           required>
+                </div>
+                <div class="button-group">
+                    <button type="submit">Enviar Respuestas</button>
+                    <button type="button" onclick="closeQuiz()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Final Score Screen -->
+    <div id="final-screen" class="screen hidden">
+        <div class="final-container">
+            <h1>¡Felicidades!</h1>
+            <h2 id="final-player-name"></h2>
+            <div class="final-score">
+                <h3>Puntuación Final: <span id="final-score-display">0</span></h3>
+                <div class="score-breakdown">
+                    <div class="score-item green">
+                        <span>Perfectos: <span id="perfect-count">0</span></span>
+                        <span class="points">+10 puntos cada uno</span>
+                    </div>
+                    <div class="score-item yellow">
+                        <span>Parciales: <span id="partial-count">0</span></span>
+                        <span class="points">+5 puntos cada uno</span>
+                    </div>
+                    <div class="score-item red">
+                        <span>Incorrectos: <span id="incorrect-count">0</span></span>
+                        <span class="points">-2 puntos cada uno</span>
+                    </div>
+                </div>
+            </div>
+            <button onclick="restartGame()">¡Jugar de Nuevo!</button>
+        </div>
+    </div>
+
+    <script src="mexicanStates.js"></script>
+    <script src="stateMapping.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

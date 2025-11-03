@@ -1,0 +1,89 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python package management
+uv.lock
+*.egg
+*.egg-info/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Test files and debugging
+test_*.py
+debug_*.py
+*_test.py
+
+# Screenshots and generated images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+
+# Log files
+*.log
+server.log
+debug.log
+
+# Backup files
+*.backup
+*.bak
+*.tmp
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Node.js (if using any JS tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Project-specific excludes
+# Keep the main SVG map file
+!mx.svg
+
+# Keep example screenshots if needed (uncomment if you want to keep some)
+# !example_*.png
