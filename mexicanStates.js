@@ -15,7 +15,7 @@ const mexicanStates = {
     "Baja California Sur": {
         "capital": "La Paz",
         "demonym": "Sudcaliforniano",
-        "acceptedDemonyms": ["Sudcaliforniano"]
+        "acceptedDemonyms": ["Sudcaliforniano", "Bajacaliforniano"]
     },
     "Campeche": {
         "capital": "Campeche",
@@ -95,7 +95,7 @@ const mexicanStates = {
     "Nuevo León": {
         "capital": "Monterrey",
         "demonym": "Neoleonés",
-        "acceptedDemonyms": ["Neoleonés", "Regiomontano"]
+        "acceptedDemonyms": ["Neoleonés", "Regiomontano", "Nuevoleonense"]
     },
     "Oaxaca": {
         "capital": "Oaxaca de Juárez",
